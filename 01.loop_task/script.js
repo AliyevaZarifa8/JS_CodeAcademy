@@ -11,10 +11,8 @@ console.log(calcAge(0));
 console.log(calcAge(20));
 
 //2
-// let namee=0
 let myName = "Front-end Developer";
 for (i = 0; i < myName.length; i++) {
-  myName+=i;
   console.log(myName[i]);
 }
 
