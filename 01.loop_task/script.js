@@ -12,8 +12,10 @@ console.log(calcAge(20));
 
 //2
 let myName = "Front-end Developer";
+let newText="";
 for (i = 0; i < myName.length; i++) {
-  console.log(myName[i]);
+  newText+=myName[i]
+  console.log(newText);
 }
 
 //3
@@ -84,3 +86,25 @@ for (let i = 1; i < 17; i++) {
   }
 }
 
+// console.log("Hello elementary numbers");
+
+//    //elementry numbers
+//    for(i=0;i<100;i++){
+//     if(!i%1==0 && i%i==0){
+//       console.log("this is  elementary numpers: " , i);
+//     }else{
+//       console.log("this is not  elementary numpers: " , i);
+//     }
+//    }
+
+
+
+
+
+//    let i = 0;
+// let len = cars.length;
+// let text = "";
+// for (; i < len; ) {
+//   text += cars[i] + "<br>";
+//   i++;
+// }
