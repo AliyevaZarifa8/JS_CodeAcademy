@@ -19,23 +19,24 @@ function findAverage(anyArrey) {
 console.log("second: ", findAverage(ages));
 
 //3. Using countries array console.log following result:
-// const countries = [
-//   "Albania",
-//   "Bolivia",
-//   "Canada",
-//   "Denmark",
-//   "Ethiopia",
-//   "Finland",
-//   "Germany",
-//   "Hungary",
-//   "Ireland",
-//   "Japan",
-//   "Kenya",
-// ];
-// function findCountries(anyArrey) {
-//   return anyArrey.map((el,i) =>el=anyArrey.toLocalUpperCase);
-// }
-// console.log(findCountries(countries));
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+function findCountries(anyArrey) {
+  return anyArrey.map(
+    (el, i) =>   el.slice(0, 3).toUpperCase()) 
+}
+console.log("third",findCountries(countries));
 
 //4. Find the sum of all indexes of 7.
 
@@ -97,16 +98,12 @@ const todos = [
 //5. Using todos array find all objects that completed property is "true".
 
 function complatedTrue(anyArrey) {
-  return anyArrey.filter((el) =>
-    el.completed == true ? console.log("first: ", el) : null
-  );
+  return anyArrey.filter((el) => el.completed == true);
 }
-console.log(complatedTrue(todos));
+console.log("first", complatedTrue(todos));
 
 //6. Using todos array find all objects that title property length is grater than 40.
 function findTitle(anyArrey) {
-  return anyArrey.filter((el) =>
-    el.title.length > 40 ? console.log("sixth", el) : null
-  );
+  return anyArrey.filter((el) => el.title.length > 40);
 }
-console.log(complatedTrue(todos));
+console.log("sixth", findTitle(todos));
