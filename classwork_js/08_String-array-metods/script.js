@@ -98,10 +98,9 @@ const colors = [
   "violet",
   "pink",
 ];
-let newColors;
-colors
-  .sort()
-  .filter((el, i) => (el[i] < el.length ? newColors.push(el) : newColors));
-console.log("sixth : ", newColors);
+
+colors.sort((a,b)=>a.length-b.length || a.localeCompare(b))
+  
+console.log("sixth : ", colors);
 
 // console.log: ['red', 'blue', 'gray', 'pink', 'black', 'brown', 'green', 'white', 'violet', 'yellow']
