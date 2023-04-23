@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.container {
+  margin-top: 15%;
+  margin-left: 35%;
+}
+.container button {
+  padding: 8px 12px;
+}
+.container .start {
+  background-color: green;
+  color: white;
+}
+.container .numbers {
+  font-size: 20px;
+}
+.container .stop {
+  background-color: red;
+  color: white;
+}
+.container .increment {
+  color: white;
+  background-color: darkcyan;
+}
+.container .decrement {
+  color: white;
+  background-color: darkcyan;
+}
+.container .reset {
+  color: black;
+  background-color: red;
+}
+.container #myNumber {
+  padding: 8px 12px;
+  border: 2px solid red;
+}
+.container #myNumber::-moz-placeholder {
+  color: red;
+}
+.container #myNumber:-ms-input-placeholder {
+  color: red;
+}
+.container #myNumber::placeholder {
+  color: red;
+}
+.container .inputValue {
+  background-color: burlywood;
+}/*# sourceMappingURL=main.css.map */

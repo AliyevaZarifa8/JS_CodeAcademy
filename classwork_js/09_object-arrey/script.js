@@ -120,3 +120,18 @@ function reverseNum(num) {
 console.log("fifth : ", reverseNum(num1));
 console.log("fifth : ", reverseNum(num2));
 console.log("fifth : ", reverseNum(num3));
+
+let obj = {
+  userName: "Leyla",
+  email: "leyla@mail.ru",
+  universty: "GDU",
+  adress: {
+    city: "Ganja",
+    street: "S.Ismayl",
+  },
+  skills: ["drawing", "play piano"],
+  getAdress: function () {
+    return this.adress.street + ", " + this.adress.city;
+  },
+};
+
