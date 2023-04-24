@@ -4,8 +4,6 @@ let stopBtn = document.querySelector(".container .stop");
 let incrementBtn = document.querySelector(".container .increment");
 let decrementBtn = document.querySelector(".container .decrement");
 let resetBtn = document.querySelector(".container .reset");
-// let numberInput = document.querySelector(".container  .multinum");
-// let inputValueBtn = document.querySelector(".container .inpulValue");
 
 let count = 0;
 let interval;
@@ -40,12 +38,11 @@ resetBtn.addEventListener("click", function () {
 
   startBtn.removeAttribute("disabled");
   stopBtn.removeAttribute("disabled");
-    incrementBtn.removeAttribute("disabled");
+  incrementBtn.removeAttribute("disabled");
   decrementBtn.removeAttribute("disabled");
-
-
 });
-function myFunction() {
-  let x = document.querySelector(".container #myNumber").value*2;
-   
-}
+let inputValueClick=document.querySelector(".container #myNumber")
+document.querySelector(".container .inputValue").onclick = function () {
+
+  inputValueClick.value = Number(inputValueClick.value)*2;
+};
