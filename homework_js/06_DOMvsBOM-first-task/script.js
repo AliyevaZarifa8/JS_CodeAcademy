@@ -41,6 +41,8 @@ resetBtn.addEventListener("click", function () {
   incrementBtn.removeAttribute("disabled");
   decrementBtn.removeAttribute("disabled");
 });
+
+
 let inputValueClick=document.querySelector(".container #myNumber")
 document.querySelector(".container .inputValue").onclick = function () {
 

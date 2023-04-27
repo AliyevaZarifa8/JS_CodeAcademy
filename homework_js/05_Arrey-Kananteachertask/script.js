@@ -34,7 +34,7 @@ const countries = [
 ];
 function findCountries(anyArrey) {
   return anyArrey.map(
-    (el, i) =>   el.slice(0, 3).toLocale UpperCase()) 
+    (el, i) =>   el.slice(0, 3).toLocaleUpperCase()) 
 }
 console.log("third",findCountries(countries));
 

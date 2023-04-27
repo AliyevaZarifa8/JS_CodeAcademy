@@ -45,6 +45,11 @@ findIndex(ary8);
 findIndex(ary9);
 findIndex(ary10);
 
+// let findIndexs = function (arrey, word) {
+//   return arrey.indexOf(word)
+// };
+// console.log(findIndexs(ary7, "abc"));
+
 //4
 function addition(a, b) {
   return a + b;
@@ -67,21 +72,21 @@ console.log(lessThan100(3, 77));
 
 //6
 
-obj1 = {
+(obj1 = {
   width: 2,
   length: 5,
   height: 1,
-},
-  obj2 = {
+}),
+  (obj2 = {
     width: 4,
     length: 2,
     height: 2,
-  },
-  obj3 = {
+  }),
+  (obj3 = {
     width: 2,
     length: 3,
     height: 5,
-  };
+  });
 function volumeOfBox(anyObj) {
   let multiply = 1;
   for (let item in anyObj) {
@@ -95,7 +100,7 @@ console.log(volumeOfBox(obj3));
 
 //7
 function basketPoint(a, b) {
-  return (2*a + 3*b);
+  return 2 * a + 3 * b;
 }
 console.log(basketPoint(1, 1));
 console.log(basketPoint(7, 5));
@@ -103,30 +108,29 @@ console.log(basketPoint(38, 8));
 
 //8
 const ary5 = [
-    {
-      name: "my name",
-      surname: "my surname",
-      city: "my city",
-    },
-    {
-      name: "my name",
-      surname: "my surname",
-      city: "my city",
-    },
-    {
-      name: "my name",
-      surname: "my surname",
-      city: "my city",
-    },
+  {
+    name: "my name",
+    surname: "my surname",
+    city: "my city",
+  },
+  {
+    name: "my name",
+    surname: "my surname",
+    city: "my city",
+  },
+  {
+    name: "my name",
+    surname: "my surname",
+    city: "my city",
+  },
+];
 
-  ];
-
-  function fillInfo(anyArrey) {
-    for (let zarif of anyArrey) {
-      zarif.name = "Zarifa";
-      zarif.surname = "Alieffa";
-      zarif.city = "Udjar";
-    }
-    return anyArrey;
+function fillInfo(anyArrey) {
+  for (let zarif of anyArrey) {
+    zarif.name = "Zarifa";
+    zarif.surname = "Alieffa";
+    zarif.city = "Udjar";
   }
-  console.log(fillInfo(ary5));
+  return anyArrey;
+}
+console.log(fillInfo(ary5));
