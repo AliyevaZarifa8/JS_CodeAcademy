@@ -1,0 +1,13 @@
+#section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed black;
+  height: 100vh;
+}
+#section form h1 {
+  text-align: center;
+}
+#section form #check {
+  visibility: hidden;
+}/*# sourceMappingURL=index.css.map */
