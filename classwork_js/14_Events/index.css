@@ -3,11 +3,25 @@
   justify-content: center;
   align-items: center;
   border: 1px dashed black;
-  height: 100vh;
+  height: 96vh;
 }
 #section form h1 {
   text-align: center;
 }
 #section form #check {
   visibility: hidden;
+  text-align: center;
+}
+#section form .center {
+  display: flex;
+  justify-content: center;
+}
+#section form #checkbox {
+  margin-left: 44%;
+}
+#section form #parag {
+  text-align: center;
+}
+#section form #submit {
+  margin-left: 35%;
 }/*# sourceMappingURL=index.css.map */
