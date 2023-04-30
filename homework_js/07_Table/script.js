@@ -728,40 +728,61 @@ function drawTable(array) {
 }
 drawTable(data);
 
-
 searchInp.addEventListener("input", function (event) {
-  
-    let filteredData = data.filter((item) =>
-      item.first_name
-        .toLocaleLowerCase()
-        .includes(event.target.value.toLocaleLowerCase()) ||item.last_name
-        .toLocaleLowerCase()
-        .includes(event.target.value.toLocaleLowerCase())
-    );
-  
-    drawTable(filteredData);
-  });
+  // let filteredData = data.filter((item) =>
+  //   item.first_name
+  //     .toLocaleLowerCase()
+  //     .includes(event.target.value.toLocaleLowerCase()) ||item.last_name
+  //     .toLocaleLowerCase()
+  //     .includes(event.target.value.toLocaleLowerCase())
+  // );
+
+  let filteredData = data.filter((item) =>
+    `${item.first_name}${item.last_name}`
+      .toLocaleLowerCase()
+      .includes(event.target.value.toLocaleLowerCase())
+  );
+
+  drawTable(filteredData);
+});
 
 idtHead.addEventListener("click", function () {
   if (idDown) {
-    idtHead.style.color="green"
-    idDown.style.color="green"
-    data.sort((a, b) => a.id - b.id);
+    idtHead.style.color = "green";
+    idDown.style.color = "green";
+    idDown.style.display = "none";
+    idUp.style.display = "block";
+    let sortedAsc = data.sort((a, b) => b.id - a.id);
+    drawTable(sortedAsc);
   } else if (idUp) {
-    idDown.style.display="none"
-    idUp.style.display="block"
-    idtHead.style.color="red"
-    idUp.style.color="red"
+    idUp.style.display = "none";
+    idDown.style.display = "block";
+    idtHead.style.color = "red";
+    idUp.style.color = "red";
 
-    data.sort((a, b) => b.id - a.id);
+    let sortedDes = data.sort((a, b) => a.id - b.id);
+    drawTable(sortedDes);
   }
- 
 });
 
-// idtHead.addEventListener("click", function () {
+namestHead.addEventListener("click", function () {
+  if (true) {
+    namestHead.style.color = "green";
+    nameUp.style.color = "green";
+    nameUp.style.display = "block";
+    let sortednameAsc = data.sort((a, b) =>
+      b.first_name.localeCompare(a.first_name)
+    );
+    drawTable(sortednameAsc);
+  } else if (nameUp) {
+    nameUp.style.display = "none";
+    nameDown.style.display = "block";
+    namestHead.style.color = "red";
+    nameDown.style.color = "red";
 
-//   let sortedArr = data.sort((a, b) => b.id - a.id);
-
-//   drawTable(sortedArr)
-
-// });
+    let sortednameDes = data.sort((a, b) =>
+      a.first_name.localeCompare(b.first_name)
+    );
+    drawTable(sortednameDes);
+  }
+});
