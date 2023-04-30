@@ -1,0 +1,20 @@
+.container .row .tabley #search {
+  width: 100%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  border: 1px solid grey;
+}
+.container .row .tabley table {
+  width: 100%;
+}
+.container .row .tabley table th,
+.container .row .tabley table td {
+  border: 1px solid grey;
+  padding: 5px 20px;
+  text-align: center;
+}
+.container .row .tabley table .idup,
+.container .row .tabley table .nameup,
+.container .row .tabley table .namedown {
+  display: none;
+}/*# sourceMappingURL=main.css.map */

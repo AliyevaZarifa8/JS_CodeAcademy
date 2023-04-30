@@ -1,0 +1,27 @@
+.container {
+  .row {
+    .tabley {
+      #search {
+        width: 100%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+        border: 1px solid grey;
+       
+      }
+      table {
+        width: 100%;
+        th,
+        td {
+          border: 1px solid grey;
+          padding: 5px 20px;
+          text-align: center;
+        }
+        .idup,
+        .nameup,
+        .namedown {
+          display: none;
+        }
+      }
+    }
+  }
+}
