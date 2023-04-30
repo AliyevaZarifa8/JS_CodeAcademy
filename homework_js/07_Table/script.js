@@ -712,6 +712,10 @@ let idDown = document.querySelector(".iddown");
 let idUp = document.querySelector(".idup");
 let nameDown = document.querySelector(".namedown");
 let nameUp = document.querySelector(".nameup");
+let sortById = "Ulfat";
+let sortByName = true;
+let sortByEmail = "Zarifa";
+let sortByGender = true;
 
 function drawTable(array) {
   tBody.innerHTML = "";
@@ -747,18 +751,23 @@ searchInp.addEventListener("input", function (event) {
 });
 
 idtHead.addEventListener("click", function () {
-  if (idDown) {
+  namestHead.style.color = "black";
+  nameUp.style.display = "none";
+  nameDown.style.display = "none";
+  if (sortById === "Ulfat") {
     idtHead.style.color = "green";
     idDown.style.color = "green";
     idDown.style.display = "none";
-    idUp.style.display = "block";
+    idUp.style.display = "inline";
+    sortById = "Zarifa";
     let sortedAsc = data.sort((a, b) => b.id - a.id);
     drawTable(sortedAsc);
-  } else if (idUp) {
+  } else if (sortById === "Zarifa") {
+    sortById = "Ulfat";
     idUp.style.display = "none";
-    idDown.style.display = "block";
+    idDown.style.display = "inline";
     idtHead.style.color = "red";
-    idUp.style.color = "red";
+    idDown.style.color = "red";
 
     let sortedDes = data.sort((a, b) => a.id - b.id);
     drawTable(sortedDes);
@@ -766,17 +775,23 @@ idtHead.addEventListener("click", function () {
 });
 
 namestHead.addEventListener("click", function () {
-  if (true) {
+  idtHead.style.color = "black";
+  idUp.style.display = "none";
+  idDown.style.display = "none";
+  if (sortByName) {
+    sortByName = false;
     namestHead.style.color = "green";
     nameUp.style.color = "green";
-    nameUp.style.display = "block";
+    nameUp.style.display = "inline";
+    nameDown.style.display = "none";
     let sortednameAsc = data.sort((a, b) =>
       b.first_name.localeCompare(a.first_name)
     );
     drawTable(sortednameAsc);
-  } else if (nameUp) {
+  } else if (sortByName === false) {
+    sortByName = true;
     nameUp.style.display = "none";
-    nameDown.style.display = "block";
+    nameDown.style.display = "inline";
     namestHead.style.color = "red";
     nameDown.style.color = "red";
 
@@ -784,5 +799,29 @@ namestHead.addEventListener("click", function () {
       a.first_name.localeCompare(b.first_name)
     );
     drawTable(sortednameDes);
+  }
+});
+
+emailtHead.addEventListener("click", function () {
+  if (sortByEmail === "Zarifa") {
+    sortByEmail = "Pramida";
+    let sortedEmail = data.sort((a, b) => a.email.localeCompare(b.email));
+    drawTable(sortedEmail);
+  } else if (sortByEmail === "Pramida") {
+    sortByEmail = "Zarifa";
+    sortedEmailDes = data.sort((a, b) => b.email.localeCompare(a.email));
+    drawTable(sortedEmailDes);
+  }
+});
+
+gendertHead.addEventListener("click", function () {
+  if (sortByGender) {
+    sortByGender = false;
+    let sortGender = data.sort((a, b) => a.gender.localeCompare(b.gender));
+    drawTable(sortGender);
+  } else if (sortByGender === false) {
+    sortByGender = true;
+    let sortDecs = data.sort((a, b) => b.gender.localeCompare(a.gender));
+    drawTable(sortDecs);
   }
 });
