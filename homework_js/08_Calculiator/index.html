@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4 bg-dark pt-3">
+          <h2 class="text-center text-success">Simple Calculator</h2>
+          <div class="row p-3 mb-2">
+            <input
+              type="number"
+              class="bg-danger text-end text-white"
+              name=""
+              id="valuesum"
+              value="0"
+            />
+          </div>
+          <div class="input">
+            <input type="number" name="" id="value1" class="" placeholder="Value1" />
+            <input
+              type="number"
+              name=""
+              id="value2"
+              class="text-start"
+              placeholder="Value2"
+            />
+          </div>
+          >
+          <div class="row p-3 mb-2">
+            <button type="submit" class="bg-danger" id="addition">Addition</button>
+          </div>
+          <div class="row p-3 mb-2">
+            <button type="submit" class="bg-danger" id="substract">Substract</button>
+          </div>
+          <div class="row p-3 mb-2">
+            <button type="submit" class="bg-danger" id="multiply">Multiply</button>
+          </div>
+          <div class="row p-3 mb-2">
+            <button type="submit" class="bg-danger" id="division">Division</button>
+          </div>
+          <div class="row p-3 mb-2">
+            <button type="reset" class="bg-warning"  id="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripit.js"></script>
+  </body>
+</html>
