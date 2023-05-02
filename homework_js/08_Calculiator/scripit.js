@@ -27,7 +27,7 @@ multiplyBtn.addEventListener("click", function () {
 divisionBtn.addEventListener("click", function () {
     inputValue1.value==="" || inputValue2.value==="" || inputValue2.value==0
     ? alert("Pls enter the correct numbers for the calculator to work")
-    :inputSum.value = Math.ceil(+inputValue1.value / +inputValue2.value)
+    :inputSum.value = Math.round(+inputValue1.value / +inputValue2.value)
 });
 resetBtn.addEventListener("click", function () {
     inputValue1.value==="" || inputValue2.value===""
