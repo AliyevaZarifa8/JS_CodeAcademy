@@ -25,12 +25,12 @@ multiplyBtn.addEventListener("click", function () {
     :inputSum.value = +inputValue1.value * +inputValue2.value;
 });
 divisionBtn.addEventListener("click", function () {
-    inputValue1.value==="" || inputValue2.value===""
-    ? alert("Pls enter a number in value1 vs value2 input")
-    :inputSum.value = Math.ceil(+inputValue1.value / +inputValue2.value);
+    inputValue1.value==="" || inputValue2.value==="" || inputValue2.value==0
+    ? alert("Pls enter the correct numbers for the calculator to work")
+    :inputSum.value = Math.ceil(+inputValue1.value / +inputValue2.value)
 });
 resetBtn.addEventListener("click", function () {
     inputValue1.value==="" || inputValue2.value===""
     ? alert("Pls enter a number in value1 vs value2 input")
-    :inputSum.value = 0;
+    :inputSum.value = 0 ,inputValue1.value="" , inputValue2.value="";
 });
