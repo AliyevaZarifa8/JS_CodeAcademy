@@ -1,7 +1,6 @@
 // let clickBtn=document.querySelector("#btn")
 // let removeBtn=document.querySelector("#remove")
 
-
 //////////////1
 
 // clickBtn.addEventListener("click",function(){
@@ -20,7 +19,6 @@
 //         console.log("lastname- ", lastName);
 // let age = localStorage.getItem("age");
 //         console.log("age - ", age);
-
 
 // Object.keys(localStorage).forEach(function(key){
 //     console.log(key);
@@ -58,28 +56,35 @@
 
 // })
 
-
-let exampleInputusername=document.querySelector("#exampleInputusername")
-let exampleInputEmail1=document.querySelector("#exampleInputEmail1")
-let exampleInputPassword1=document.querySelector("#exampleInputPassword1")
-let exampleCheck1=document.querySelector("#exampleCheck1")
-let myForm=document.querySelector("#myform")
-
+let exampleInputusername = document.querySelector("#exampleInputusername");
+let exampleInputEmail1 = document.querySelector("#exampleInputEmail1");
+let exampleInputPassword1 = document.querySelector("#exampleInputPassword1");
+let exampleCheck1 = document.querySelector("#exampleCheck1");
+let myForm = document.querySelector("#myform");
+let allInput = document.querySelectorAll("input");
 
 let newArr = JSON.parse(localStorage.getItem("newArr")) || [];
-myForm.addEventListener("submit",function(e){
-    e.preventDefault()
-    let obj={
-        userName :exampleInputusername.value,
-        email:exampleInputEmail1.value,
-        pasword:exampleInputPassword1.value,
-        check:exampleCheck1.checked
-    }
-    obj.userName==="" || obj.email===""
-    ?alert(" pls enter username vs email")
-    :newArr.push(obj)
-localStorage.setItem('newArr',JSON.stringify(newArr))
-})
+myForm.addEventListener("submit", function (e) {
+  e.preventDefault();
 
+  let obj = {
+    userName: exampleInputusername.value,
+    email: exampleInputEmail1.value,
+    pasword: exampleInputPassword1.value,
+    check: exampleCheck1.checked,
+  };
+  obj.userName === "" || obj.email === ""
+    ? alert(" pls enter username vs email")
+    : newArr.push(obj);
 
+  // newArr.filter((item)=>item.value==obj.value
+  // ?alert(" your already compliated form")
+  // :newArr.push(obj))
+  exampleInputusername.value = "";
+  exampleInputEmail1.value = "";
+  exampleInputPassword1.value = "";
+  exampleCheck1.checked = false;
+  
 
+  localStorage.setItem("newArr", JSON.stringify(newArr));
+});
