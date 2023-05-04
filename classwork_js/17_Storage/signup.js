@@ -61,7 +61,7 @@ let exampleInputEmail1 = document.querySelector("#exampleInputEmail1");
 let exampleInputPassword1 = document.querySelector("#exampleInputPassword1");
 let exampleCheck1 = document.querySelector("#exampleCheck1");
 let myForm = document.querySelector("#myform");
-let allInput = document.querySelectorAll("input");
+
 
 let newArr = JSON.parse(localStorage.getItem("newArr")) || [];
 myForm.addEventListener("submit", function (e) {
@@ -80,11 +80,12 @@ myForm.addEventListener("submit", function (e) {
   // newArr.filter((item)=>item.value==obj.value
   // ?alert(" your already compliated form")
   // :newArr.push(obj))
-  exampleInputusername.value = "";
-  exampleInputEmail1.value = "";
-  exampleInputPassword1.value = "";
-  exampleCheck1.checked = false;
-  
+
+  //   exampleInputusername.value = "";
+  //   exampleInputEmail1.value = "";
+  //   exampleInputPassword1.value = "";
+  //   exampleCheck1.checked = false;
 
   localStorage.setItem("newArr", JSON.stringify(newArr));
+  window.location.href="http://127.0.0.1:5500/classwork_js/17_Storage/login.html"
 });
