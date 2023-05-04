@@ -89,35 +89,52 @@ const books = [
     year: "2001",
   },
 ];
-let card=document.querySelector(".card")
-let row=document.querySelector(".row")
-let col=document.querySelector(".col-3")
-let button=document.querySelector(".btn")
+let row = document.querySelector(".row");
 
+let allBooks = JSON.parse(localStorage.getItem("favoritedBooks")) || [];
 
-
-
-
-books.forEach(element => {
-row.innerHTML+= 
-`
-<div class="col col-3 my-3">
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h3 class="card-title"></h3>    </p>
-      <p class="card-publiser">Publisher: ${element.publisher} </p>
-      <p class="card-year">Publisher Year :${element.year} </p>
-      <button href="#" class="btn btn-primary favorites">Add to favorite</button>
-     
+books.forEach((item) => {
+  row.innerHTML += `
+    <div class="col-3 my-4">
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">${item.title}</h5>
+        <p class="card-text">
+         Publisher: ${item.publisher}
+        </p>
+         <i><p>Year: ${item.year}</p></i>
+        <button class="btn btn-primary" id=${item.id}>Add to Favs</button>
+      </div>
     </div>
   </div>
-</div>
-`
+    `;
 });
 
-button.addEventListener("click",function(){
-                              
-})
+let allAddBtns = document.querySelectorAll(".btn-primary");
 
+// allAddBtns.forEach((elem) => {
+//   elem.addEventListener("click", function () {
+//     console.log(elem.getAttribute("id"));
+//     favortBook = books.find((obj) => obj.id == elem.id);
 
+//     allBooks.push(favortBook);
+//     localStorage.setItem("favoritedBooks" ,JSON.stringify(allBooks))
+//   });
+// });
 
+allAddBtns.forEach((elem) => {
+  elem.addEventListener("click", function () {
+    let selectedObj = allBooks.find((item) => item.id == elem.id);
+
+    
+    if (!allBooks.includes(selectedObj)) {
+      let favoritedBook = books.find((obj) => obj.id === +elem.id);
+
+      allBooks.push(favoritedBook);
+
+      localStorage.setItem("favoritedBooks", JSON.stringify(allBooks));
+    } else {
+      alert("You have already added this book!!");
+    }
+  });
+});
