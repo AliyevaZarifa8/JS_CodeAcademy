@@ -1,0 +1,31 @@
+{
+    "students":
+    [
+{
+    "id":1,
+    "firstName":"Zarifa",
+    "surName":"Alieffa",
+    "age":19
+},
+{
+    "id":2,
+    "firstName":"Leyla",
+    "surName":"Alieffa",
+    "age":20
+},
+{
+    "id":1,
+    "firstName":"Gultakin",
+    "surName":"Mammadova",
+    "age":20
+},
+{
+    "id":1,
+    "firstName":"Nijat",
+    "surName":"Carqalayev",
+    "age":19
+}
+
+    ]
+
+}
