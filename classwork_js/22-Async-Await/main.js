@@ -16,7 +16,8 @@ async function getAllObj() {
         <div class="ms-5">
           <i class="fa-solid fa-trash-can me-3 text-danger" id="${element.id}"
            onclick=getDeleteObj("${element.id}") ></i>
-          <i class="fa-solid fa-pen-to-square text-success "></i>
+          <i class="fa-solid fa-pen-to-square text-success id="${element.id}"
+          onclick=getEditObj("${element.id}") "></i>
         </div>
       </div>
         `;
@@ -44,8 +45,9 @@ let myForm = document.querySelector("#myform");
 let addInputcntName = document.querySelector("#countName");
 let addInputCountry = document.querySelector("#country");
 
-myForm.addEventListener("submit", async function () {
-  await fetch(`https://northwind.vercel.app/api/customers/`, {
+myForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  fetch(`https://northwind.vercel.app/api/customers/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -57,5 +59,15 @@ myForm.addEventListener("submit", async function () {
       },
     }),
   });
+
   getAllObj();
 });
+
+let myFormEdit = document.querySelector("#myformedit");
+let editInputcntName = document.querySelector("#countNameedit");
+let editInputCountry = document.querySelector("#countryedit");
+
+function getEditObj(id) {
+  window.location("/edit.html");
+  editInputcntName.value = editInputCountry.value = console.log(id);
+}

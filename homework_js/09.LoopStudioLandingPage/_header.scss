@@ -1,0 +1,74 @@
+#header {
+  height: 100vh;
+  background-image: url("./Image/Desktop/image-hero.jpg");
+  background-size: cover;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    background-color: transparent;
+    height: 12vh;
+    h1 {
+      color: azure;
+      font-size: 34px;
+      font-weight: bold;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      column-gap: 25px;
+
+      li {
+        a {
+          font-size: 20px;
+          text-decoration: none;
+          color: white;
+          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+          &:hover {
+            border: none;
+            border-bottom: 3px solid white;
+          }
+        }
+      }
+    }
+    #menu {
+      display: none;
+    }
+  }
+
+  .jans-text {
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    width: 56%;
+    margin-top: 200px;
+
+    span {
+      text-transform: uppercase;
+      color: white;
+      font-size: 70px;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+      margin: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #header {
+    height: 110vh;
+    margin-bottom: 39px;
+    .jans-text {
+      width: 100%;
+      height: 23vh;
+
+      span {
+        font-size: 50px;
+      }
+    }
+  }
+}

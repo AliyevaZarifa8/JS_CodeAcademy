@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+#header {
+  height: 100vh;
+  background-image: url("./Image/Desktop/image-hero.jpg");
+  background-size: cover;
+}
+#header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  background-color: transparent;
+  height: 12vh;
+}
+#header nav h1 {
+  color: azure;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#header nav ul {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+#header nav ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#header nav ul li a:hover {
+  border: none;
+  border-bottom: 3px solid white;
+}
+#header nav #menu {
+  display: none;
+}
+#header .jans-text {
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  width: 56%;
+  margin-top: 200px;
+}
+#header .jans-text span {
+  text-transform: uppercase;
+  color: white;
+  font-size: 70px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  margin: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  #header {
+    height: 110vh;
+    margin-bottom: 39px;
+  }
+  #header .jans-text {
+    width: 100%;
+    height: 23vh;
+  }
+  #header .jans-text span {
+    font-size: 50px;
+  }
+}
+#hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+#hero .text {
+  background-color: white;
+  margin-top: 200px;
+  padding-left: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+#hero .text h1 {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+}
+#hero .text p {
+  color: rgb(151, 146, 146);
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 992px) {
+  #hero {
+    height: 100%;
+  }
+  #hero .text {
+    width: 100%;
+  }
+}
+.text-button h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 70px;
+  text-transform: uppercase;
+}
+.text-button button {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  padding: 15px 50px;
+  text-transform: uppercase;
+  border: 2px solid black;
+  display: flex;
+}
+.text-button button:hover {
+  background-color: black;
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  .text-button {
+    position: relative;
+  }
+  .text-button h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .text-button button {
+    padding: 2px 60px;
+    position: absolute;
+    top: 105vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+#card {
+  height: 150vh;
+}
+#card .cards {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 15px;
+  margin-bottom: 17px;
+  height: 70vh;
+}
+#card .cards:nth-child(1) {
+  background-image: url("./Image/Desktop/image-deep-earth.jpg");
+  background-size: cover;
+}
+#card .cards:nth-child(2) {
+  background-image: url("./Image/Desktop/image-night-arcade.jpg");
+  background-size: cover;
+}
+#card .cards:nth-child(3) {
+  background-image: url("./Image/Desktop/image-soccer-team.jpg");
+  background-size: cover;
+}
+#card .cards:nth-child(4) {
+  background-image: url("./Image/Desktop/image-grid.jpg");
+  background-size: cover;
+}
+#card .cards:nth-child(5) {
+  background-image: url("./Image/Desktop/image-from-above.jpg");
+  background-size: cover;
+}
+#card .cards:nth-child(6) {
+  background-image: url("./Image/Desktop/image-pocket-borealis.jpg");
+  background-size: cover;
+}
+#card .cards:nth-child(7) {
+  background-image: url("./Image/Desktop/image-curiosity.jpg");
+  background-size: cover;
+}
+#card .cards:nth-child(8) {
+  background-image: url("./Image/Desktop/image-fisheye.jpg");
+  background-size: cover;
+}
+
+@media only screen and (max-width: 992px) {
+  #card {
+    height: 100vh;
+  }
+  #card .cards {
+    height: 20vh;
+    width: 48%;
+    margin-right: 10px;
+  }
+  #card .cards:nth-child(1) {
+    background-image: url("./Image/Mobile/image-deep-earth.jpg");
+  }
+  #card .cards:nth-child(2) {
+    background-image: url("./Image/Mobile/image-night-arcade.jpg");
+  }
+  #card .cards:nth-child(3) {
+    background-image: url("./Image/Mobile/image-soccer-team.jpg");
+  }
+  #card .cards:nth-child(4) {
+    background-image: url("./Image/Mobile/image-grid.jpg");
+  }
+  #card .cards:nth-child(5) {
+    background-image: url("./Image/Mobile/image-from-above.jpg");
+  }
+  #card .cards:nth-child(6) {
+    background-image: url("./Image/Mobile/image-pocket-borealis.jpg");
+  }
+  #card .cards:nth-child(7) {
+    background-image: url("./Image/Mobile/image-curiosity.jpg");
+  }
+  #card .cards:nth-child(8) {
+    background-image: url("./Image/Mobile/image-fisheye.jpg");
+  }
+}
+.logo-icon {
+  padding-top: 30px;
+  height: 20vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+.logo-icon .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.logo-icon .logo h1 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo-icon .logo ul {
+  display: flex;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.logo-icon .logo ul li {
+  margin: 0;
+}
+.logo-icon .logo ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.logo-icon .logo ul li a:hover {
+  border: none;
+  border-bottom: 3px solid white;
+}
+.logo-icon .icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.logo-icon .icons ul {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.logo-icon .icons ul li a {
+  color: #fff;
+  font-size: 30px;
+}
+.logo-icon .icons ul li a:hover {
+  border: none;
+  border-bottom: 3px solid white;
+}
+.logo-icon .icons p {
+  font-size: 18px;
+  color: rgb(164, 157, 157);
+}
+
+@media only screen and (max-width: 992px) {
+  .logo-icon {
+    height: 33vh;
+  }
+  .logo-icon .common {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-icon .common .logo {
+    justify-content: center;
+  }
+  .logo-icon .common .icon {
+    align-items: center;
+  }
+}/*# sourceMappingURL=main.css.map */

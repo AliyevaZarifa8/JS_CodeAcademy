@@ -1,0 +1,36 @@
+#hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+
+  .text {
+    background-color: white;
+    margin-top: 200px;
+    padding-left: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    h1 {
+      text-transform: uppercase;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+      font-size: 50px;
+    }
+    p {
+      color: rgb(151, 146, 146);
+      font-weight: 500;
+    }
+  }
+
+
+}
+@media only screen and (max-width:992px){
+  #hero{
+    height: 100%;
+    .text{
+      width: 100%;
+    }
+  }
+}

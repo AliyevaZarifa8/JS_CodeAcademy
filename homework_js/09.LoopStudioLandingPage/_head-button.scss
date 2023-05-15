@@ -1,0 +1,40 @@
+.text-button {
+  h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 70px;
+    text-transform: uppercase;
+  }
+
+  button {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    border: 2px solid black;
+    display: flex;
+    &:hover {
+      background-color: black;
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .text-button {
+    position: relative;
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    button {
+      padding: 2px 60px;
+      position: absolute;
+      top: 105vh;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

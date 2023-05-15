@@ -1,12 +1,11 @@
-import { Base_URL } from "./api.js";
+// import { Base_URL } from "./api.js";
 
 let tBody = document.querySelector("tbody");
 
 let button = document.querySelector("button");
 
 function getAllSuppliers() {
-
-  fetch(`${Base_URL}`)
+  fetch(`https://northwind.vercel.app/api/orders`)
     .then((response) => response.json())
     .then((data) =>
       data.forEach((element) => {
@@ -28,13 +27,12 @@ function getAllSuppliers() {
 getAllSuppliers();
 
 function deleButton() {
-  fetch(`${Base_URL}`, {
+  fetch(`https://northwind.vercel.app/api/orders`, {
     method: "DELETE",
   }).then(() => {
     getAllSuppliers();
   });
 
   console.log("helloooo");
-}deleButton() 
-
-
+}
+deleButton();

@@ -1,0 +1,85 @@
+#card {
+  height: 150vh;
+
+  .cards {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 15px;
+    margin-bottom: 17px;
+    height: 70vh;
+  }
+
+  .cards:nth-child(1) {
+    background-image: url("./Image/Desktop/image-deep-earth.jpg");
+    background-size: cover;
+  }
+  .cards:nth-child(2) {
+    background-image: url("./Image/Desktop/image-night-arcade.jpg");
+    background-size: cover;
+  }
+  .cards:nth-child(3) {
+    background-image: url("./Image/Desktop/image-soccer-team.jpg");
+    background-size: cover;
+  }
+  .cards:nth-child(4) {
+    background-image: url("./Image/Desktop/image-grid.jpg");
+    background-size: cover;
+  }
+  .cards:nth-child(5) {
+    background-image: url("./Image/Desktop/image-from-above.jpg");
+    background-size: cover;
+  }
+  .cards:nth-child(6) {
+    background-image: url("./Image/Desktop/image-pocket-borealis.jpg");
+    background-size: cover;
+  }
+  .cards:nth-child(7) {
+    background-image: url("./Image/Desktop/image-curiosity.jpg");
+    background-size: cover;
+  }
+  .cards:nth-child(8) {
+    background-image: url("./Image/Desktop/image-fisheye.jpg");
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #card {
+    height: 100vh;
+
+    .cards {
+      height: 20vh;
+      width: 48%;
+      margin-right: 10px;
+    }
+
+    .cards:nth-child(1) {
+      background-image: url("./Image/Mobile/image-deep-earth.jpg");
+    }
+    .cards:nth-child(2) {
+      background-image: url("./Image/Mobile/image-night-arcade.jpg");
+    }
+    .cards:nth-child(3) {
+      background-image: url("./Image/Mobile/image-soccer-team.jpg");
+    }
+    .cards:nth-child(4) {
+      background-image: url("./Image/Mobile/image-grid.jpg");
+    }
+    .cards:nth-child(5) {
+      background-image: url("./Image/Mobile/image-from-above.jpg");
+    }
+    .cards:nth-child(6) {
+      background-image: url("./Image/Mobile/image-pocket-borealis.jpg");
+    }
+    .cards:nth-child(7) {
+      background-image: url("./Image/Mobile/image-curiosity.jpg");
+    }
+    .cards:nth-child(8) {
+      background-image: url("./Image/Mobile/image-fisheye.jpg");
+    }
+  }
+}
