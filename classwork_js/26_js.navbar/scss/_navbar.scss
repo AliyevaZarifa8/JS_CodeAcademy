@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  h1 {
+    font-weight: 700;
+    font-size: 60px;
+  }
+  .input {
+    position: relative;
+    input {
+      padding: 7px 14px;
+      outline: none;
+    }
+    .search {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      column-gap: 19px;
+      li {
+        a {
+          color: black;
+        }
+        i{
+            color: cornflowerblue;
+        }
+      }
+    }
+  }
+  .menu{
+    display: none;
+  }
+
+  @media only screen and (max-width:992px){
+.input{
+    display: none;
+     }
+   nav{
+    display: none;
+   }
+   .menu{
+    display: block;
+    }
+  
+  }
+}
