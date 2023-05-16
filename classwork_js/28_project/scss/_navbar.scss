@@ -1,0 +1,21 @@
+header{
+    nav{
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+.input-select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+#input{
+   width: 50%;
+}
+#select{
+padding: 5px;
+}
+}
