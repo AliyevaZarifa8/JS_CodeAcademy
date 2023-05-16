@@ -99,14 +99,6 @@
   font-weight: 500;
 }
 
-@media only screen and (max-width: 992px) {
-  #hero {
-    height: 100%;
-  }
-  #hero .text {
-    width: 100%;
-  }
-}
 .text-button h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;

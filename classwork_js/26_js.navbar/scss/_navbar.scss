@@ -3,51 +3,65 @@
   justify-content: space-between;
   height: 10vh;
   align-items: center;
-  h1 {
+  h2 {
     font-weight: 700;
-    font-size: 60px;
+    font-size: 40px;
   }
-  .input {
-    position: relative;
-    input {
-      padding: 7px 14px;
-      outline: none;
+  .nav-inp {
+    display: flex;
+    column-gap: 290px;
+    .input-icon {
+      position: relative;
+      input {
+        padding: 9px 19px;
+        outline: none;
+      }
+      .search {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+      }
     }
-    .search {
-      position: absolute;
-      right: 10px;
-      top: 8px;
-    }
-  }
 
-  nav {
-    ul {
-      display: flex;
-      column-gap: 19px;
-      li {
-        a {
-          color: black;
-        }
-        i{
+    nav {
+      ul {
+        display: flex;
+        column-gap: 19px;
+        li {
+          a {
+            color: black;
+            
+          }
+          i {
             color: cornflowerblue;
+          }
         }
       }
     }
   }
-  .menu{
+  .menu {
     display: none;
   }
 
-  @media only screen and (max-width:992px){
-.input{
-    display: none;
-     }
-   nav{
-    display: none;
-   }
-   .menu{
-    display: block;
+  @media only screen and (max-width: 992px) {
+    .nav-inp {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 20px;
+      margin-top: 50vh;
+      nav {
+       
+        ul {
+          flex-direction: column;
+          row-gap: 30px;
+        }
+      }
+      }
     }
-  
+    .menu {
+      display: block;
+    }
   }
-}
+
