@@ -1,0 +1,35 @@
+.black-div {
+  display: none;
+  background-color: black;
+  opacity: 0.8;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+
+  .fa-xmark {
+    display: flex;
+    justify-content: end;
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 20px;
+  }
+  ul {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    li {
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 25px;
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 section {
-
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -8,39 +7,81 @@ section {
     text-align: center;
     border: none;
     border-bottom: 3px solid red;
-  
-
   }
 
-  table {
+  #table {
     text-align: center;
     margin-top: 20px;
-    width: 80%;
-    thead {
-        tr{
-            th{
-                border: 1px solid black;
-            }
+    width: 87%;
+    tbody {
+      tr {
+        td {
+          img {
+            width: 70px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+          }
         }
-    }
-    tbody{
-        tr{
-            td{
-                border: 1px solid black;
-             
-                img{
-                    width: 70px;
-                    border-radius: 50%;
-                    width: 40px;
-                    height: 40px;
-                }   
-            }
-        }
+      }
     }
   }
+  .card {
+    display: none;
+  }
 
-.card{
-    
-}
+  @media only screen and (max-width: 992px) {
+    #table {
+      display: none;
+    }
 
+    .card {
+      display: block;
+      width: 80%;
+      padding: 16px 27px;
+      row-gap: 17px;
+      background-color: antiquewhite;
+      margin-bottom: 15px;
+      .id-data {
+        #id {
+          color: rgb(51, 51, 238);
+        }
+        #data {
+          color: rgb(17, 186, 17);
+        }
+      }
+
+      .img-text-button {
+        display: flex;
+        justify-content: space-between;
+        .img-text {
+          display: flex;
+          column-gap: 30px;
+          img {
+            width: 70px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .card {
+      width: 80%;
+      background-color: pink;
+      margin-bottom: 15px;
+
+      .img-text-button {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        .button {
+          margin-left: 70px;
+        }
+      }
+    }
+  }
 }
