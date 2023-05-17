@@ -4,12 +4,26 @@ let firstName = document.querySelector("#firstname");
 let lastName = document.querySelector("#lastname");
 let InputEmail1 = document.querySelector("#InputEmail1");
 let InputPhoto = document.querySelector("#photo");
+let textChange = document.querySelector("#text");
+let btnChange = document.querySelector("#button");
 const date = new Date();
+let id = new URLSearchParams(window.location.search).get("id");
+
+if (id) {
+  textChange.innerHTML = "Edit";
+  btnChange.innerHTML = "Edit";
+
+  axios(`${baseUrl}/${id}`).then((res) => {
+    firstName.value = res.data.name;
+    lastName.value = res.data.surname;
+    InputEmail1.value = res.data.email;
+    
+  });
+}
 
 myForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("form");
-  console.log(InputPhoto.value);
+
   let obj = {
     photo: `./image/${InputPhoto.value.split("\\")[2]}`,
     name: firstName.value,
@@ -17,5 +31,10 @@ myForm.addEventListener("submit", function (e) {
     email: InputEmail1.value,
     date: date.toLocaleString(),
   };
-  axios.post(baseUrl, obj);
+
+  if (!id) {
+    axios.post(baseUrl, obj);
+  } else {
+    axios.put(`${baseUrl}/${id}`, obj);
+  }
 });

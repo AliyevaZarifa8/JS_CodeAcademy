@@ -13,7 +13,7 @@ closeIcon.addEventListener("click", function () {
 const baseUrl = " http://localhost:8080/user";
 let tBody = document.querySelector("tbody");
 
-async function drawTable(array) {
+async function drawTable() {
   const res = await axios(baseUrl);
   const data = await res.data;
   tBody.innerHTML = "";
@@ -27,9 +27,9 @@ async function drawTable(array) {
      <td>${element.email}</td>
      <td>${element.date}</td>
      <td>
-         <a href="" class="btn btn-success">Edit</a>
+         <a href="add.html?id=${element.id}" class="btn btn-success">Edit</a>
          <button class="btn btn-danger" onclick=deleteFunc(${element.id})>Delete</button>
-         <button class="btn btn-primary">Add Fav</button>
+         <button class="btn btn-primary btn-fav" onclick=addFav("${element.id}")>Add Fav</button>
      </td>
     </tr>
     `;
@@ -38,6 +38,20 @@ async function drawTable(array) {
 drawTable();
 
 async function deleteFunc(userId) {
-  console.log("deleted");
   await axios.delete(`${baseUrl}/${userId}`);
+}
+
+const favStorage = JSON.parse(localStorage.getItem("favUser")) || [];
+async function addFav(userId) {
+  const res = await axios(`${baseUrl}/${userId}`);
+  const data = await res.data;
+
+  isTrue = favStorage.some((element) => element.id === data.id);
+
+  if (!isTrue) {
+    favStorage.push(data);
+    localStorage.setItem("favUser",JSON.stringify(favStorage));
+  } else {
+    alert("Character already exists in favorite list!");
+  }
 }
