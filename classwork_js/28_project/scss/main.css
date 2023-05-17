@@ -32,10 +32,10 @@ section {
 section .row {
   row-gap: 20px;
 }
-section .row a {
+section .row .content a {
   color: black;
   text-decoration: none;
 }
-section .row a .card img {
+section .row .content a .card img {
   height: 30vh;
 }/*# sourceMappingURL=main.css.map */
