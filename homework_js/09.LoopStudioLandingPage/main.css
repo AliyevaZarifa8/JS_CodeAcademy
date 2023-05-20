@@ -6,6 +6,44 @@
   list-style: none;
 }
 
+.menuclick {
+  background-color: black;
+}
+.menuclick .logo-icon {
+  margin-top: 0;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.menuclick .logo-icon h1 {
+  color: azure;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.menuclick .logo-icon .menicon {
+  color: white;
+  font-size: 24px;
+}
+.menuclick ul {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 9px;
+  padding: 20px;
+}
+.menuclick ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+.menuclick ul li a:hover {
+  border: none;
+  border-bottom: 3px solid white;
+}
+
 #header {
   height: 100vh;
   background-image: url("./Image/Desktop/image-hero.jpg");
@@ -41,8 +79,10 @@
   border: none;
   border-bottom: 3px solid white;
 }
-#header nav #menu {
+#header nav .menu {
   display: none;
+  color: white;
+  font-size: 24px;
 }
 #header .jans-text {
   border: 3px solid white;
@@ -61,20 +101,22 @@
 }
 
 @media only screen and (max-width: 992px) {
-  #header {
-    height: 110vh;
-    margin-bottom: 39px;
+  #header nav ul {
+    display: none;
+  }
+  #header nav .menu {
+    display: block;
   }
   #header .jans-text {
     width: 100%;
-    height: 23vh;
   }
   #header .jans-text span {
     font-size: 50px;
   }
 }
 #hero {
-  height: 90vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   align-items: center;
 }
@@ -99,6 +141,22 @@
   font-weight: 500;
 }
 
+@media only screen and (max-width: 992px) {
+  #hero {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  #hero .text {
+    width: 100%;
+    margin-top: 100px;
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #hero .text {
+    margin: 0 50px;
+  }
+}
 .text-button h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -120,19 +178,14 @@
 
 @media only screen and (max-width: 992px) {
   .text-button {
-    position: relative;
+    display: flex;
+    justify-content: center;
   }
   .text-button h1 {
     font-size: 40px;
-    text-align: center;
   }
-  .text-button button {
-    padding: 2px 60px;
-    position: absolute;
-    top: 105vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  .text-button .seall {
+    display: none;
   }
 }
 #card {
@@ -182,15 +235,20 @@
   background-image: url("./Image/Desktop/image-fisheye.jpg");
   background-size: cover;
 }
+#card .seall {
+  display: none;
+  justify-content: center;
+  margin-top: 20px;
+}
+#card .seall button {
+  padding: 4px 14px;
+}
 
 @media only screen and (max-width: 992px) {
-  #card {
-    height: 100vh;
-  }
   #card .cards {
-    height: 20vh;
-    width: 48%;
-    margin-right: 10px;
+    font-size: 22px;
+    height: 18vh;
+    width: 47%;
   }
   #card .cards:nth-child(1) {
     background-image: url("./Image/Mobile/image-deep-earth.jpg");
@@ -216,11 +274,20 @@
   #card .cards:nth-child(8) {
     background-image: url("./Image/Mobile/image-fisheye.jpg");
   }
+  #card .seall {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #card .cards {
+    font-size: 29px;
+    height: 27vh;
+    width: 100%;
+  }
 }
 .logo-icon {
   margin-top: 80px;
   padding-top: 30px;
-  height: 20vh;
   background-color: black;
   display: flex;
   align-items: center;
@@ -277,17 +344,23 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .logo-icon {
-    height: 33vh;
-  }
   .logo-icon .common {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
   .logo-icon .common .logo {
     justify-content: center;
+    align-items: center;
   }
-  .logo-icon .common .icon {
+  .logo-icon .common .logo ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .logo-icon .common .icons {
+    justify-content: center;
     align-items: center;
   }
 }/*# sourceMappingURL=main.css.map */

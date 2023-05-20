@@ -1,7 +1,6 @@
 .logo-icon {
   margin-top: 80px;
   padding-top: 30px;
-  height: 20vh;
   background-color: black;
   display: flex;
   align-items: center;
@@ -65,15 +64,23 @@
 
 @media only screen and (max-width: 992px) {
   .logo-icon {
-    height: 33vh;
     .common {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-content: center;
 
       .logo {
         justify-content: center;
+        align-items: center;
+        ul {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+        }
       }
-      .icon {
+      .icons {
+        justify-content: center;
         align-items: center;
       }
     }

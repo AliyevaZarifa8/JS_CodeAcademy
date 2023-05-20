@@ -1,0 +1,41 @@
+.menuclick {
+  background-color: black;
+
+  .logo-icon {
+    margin-top: 0;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: azure;
+      font-size: 34px;
+      font-weight: bold;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .menicon {
+      color: white;
+      font-size: 24px;
+    }
+  }
+  ul {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 9px;
+    padding: 20px;
+    li {
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        &:hover {
+          border: none;
+          border-bottom: 3px solid white;
+        }
+      }
+    }
+  }
+}

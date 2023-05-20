@@ -1,6 +1,5 @@
 #card {
   flex-wrap: wrap;
-
   .cards {
     margin: 5px;
     color: white;
@@ -11,7 +10,6 @@
     display: flex;
     align-items: flex-end;
     padding-left: 15px;
-    // margin-bottom: 17px;
     height: 70vh;
   }
 
@@ -47,15 +45,22 @@
     background-image: url("./Image/Desktop/image-fisheye.jpg");
     background-size: cover;
   }
+
+  .seall {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+    button {
+      padding: 4px 14px;
+    }
+  }
 }
 @media only screen and (max-width: 992px) {
   #card {
-    height: 100vh;
-
     .cards {
-      height: 20vh;
-      width: 48%;
-      margin-right: 10px;
+      font-size: 22px;
+      height: 18vh;
+      width: 47%;
     }
 
     .cards:nth-child(1) {
@@ -81,6 +86,20 @@
     }
     .cards:nth-child(8) {
       background-image: url("./Image/Mobile/image-fisheye.jpg");
+    }
+
+    .seall {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #card {
+    .cards {
+      font-size: 29px;
+      height: 27vh;
+      width: 100%;
     }
   }
 }

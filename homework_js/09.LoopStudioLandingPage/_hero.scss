@@ -1,5 +1,6 @@
 #hero {
-  height: 90vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   align-items: center;
 
@@ -23,16 +24,24 @@
       font-weight: 500;
     }
   }
-
-
 }
 
+@media only screen and (max-width: 992px) {
+  #hero {
+    flex-direction: column;
+    margin-top: 20px;
+    .text {
+      width: 100%;
+      margin-top: 100px;
+      padding-left: 0;
+    }
+  }
+}
 
-// @media only screen and (max-width:992px){
-//   #hero{
-//     height: 100%;
-//     .text{
-//       width: 100%;
-//     }
-//   }
-// }
+@media only screen and (max-width: 768px) {
+  #hero {
+    .text {
+      margin: 0 50px;
+    }
+  }
+}

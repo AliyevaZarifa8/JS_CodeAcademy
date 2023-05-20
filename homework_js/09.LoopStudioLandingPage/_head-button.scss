@@ -22,19 +22,14 @@
 
 @media only screen and (max-width: 992px) {
   .text-button {
-    position: relative;
+    display: flex;
+    justify-content: center;
     h1 {
       font-size: 40px;
-      text-align: center;
     }
 
-    button {
-      padding: 2px 60px;
-      position: absolute;
-      top: 105vh;
-      display: flex;
-      justify-content: center;
-      text-align: center;
+    .seall {
+      display: none;
     }
   }
 }
