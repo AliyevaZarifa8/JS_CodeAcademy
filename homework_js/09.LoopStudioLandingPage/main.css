@@ -136,9 +136,10 @@
   }
 }
 #card {
-  height: 150vh;
+  flex-wrap: wrap;
 }
 #card .cards {
+  margin: 5px;
   color: white;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
@@ -147,7 +148,6 @@
   display: flex;
   align-items: flex-end;
   padding-left: 15px;
-  margin-bottom: 17px;
   height: 70vh;
 }
 #card .cards:nth-child(1) {
@@ -218,59 +218,60 @@
   }
 }
 .logo-icon {
+  margin-top: 80px;
   padding-top: 30px;
   height: 20vh;
   background-color: black;
   display: flex;
   align-items: center;
 }
-.logo-icon .logo {
+.logo-icon .common .logo {
   display: flex;
   flex-direction: column;
-  justify-content: start;
 }
-.logo-icon .logo h1 {
+.logo-icon .common .logo h1 {
   margin-bottom: 20px;
   color: white;
   font-size: 34px;
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.logo-icon .logo ul {
+.logo-icon .common .logo ul {
   display: flex;
   -moz-column-gap: 25px;
        column-gap: 25px;
+  padding: 0;
 }
-.logo-icon .logo ul li {
+.logo-icon .common .logo ul li {
   margin: 0;
 }
-.logo-icon .logo ul li a {
+.logo-icon .common .logo ul li a {
   text-decoration: none;
   color: #fff;
 }
-.logo-icon .logo ul li a:hover {
+.logo-icon .common .logo ul li a:hover {
   border: none;
   border-bottom: 3px solid white;
 }
-.logo-icon .icons {
+.logo-icon .common .icons {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.logo-icon .icons ul {
+.logo-icon .common .icons ul {
   display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-.logo-icon .icons ul li a {
+.logo-icon .common .icons ul li a {
   color: #fff;
   font-size: 30px;
 }
-.logo-icon .icons ul li a:hover {
+.logo-icon .common .icons ul li a:hover {
   border: none;
   border-bottom: 3px solid white;
 }
-.logo-icon .icons p {
+.logo-icon .common .icons p {
   font-size: 18px;
   color: rgb(164, 157, 157);
 }

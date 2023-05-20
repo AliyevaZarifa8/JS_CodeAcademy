@@ -1,5 +1,5 @@
 let row = document.querySelector(".row");
-let favUser = JSON.parse(localStorage.getItem("favUser"));
+let favUser = JSON.parse(localStorage.getItem("favUser"))||[];
 
 function getallFav() {
   console.log(favUser);
@@ -24,8 +24,8 @@ function getallFav() {
 }
 getallFav();
 
-function removeFav(maId) {
-  favUser = favUser.filter((el) => el.id != maId);
+function removeFav(cartoonId) {
+  favUser = favUser.filter((el) => el.id != cartoonId);
   localStorage.setItem("favUser", JSON.stringify(favUser));
   getallFav();
 }

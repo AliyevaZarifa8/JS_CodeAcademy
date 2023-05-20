@@ -1,7 +1,8 @@
 #card {
-  height: 150vh;
+  flex-wrap: wrap;
 
   .cards {
+    margin: 5px;
     color: white;
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
@@ -10,7 +11,7 @@
     display: flex;
     align-items: flex-end;
     padding-left: 15px;
-    margin-bottom: 17px;
+    // margin-bottom: 17px;
     height: 70vh;
   }
 
