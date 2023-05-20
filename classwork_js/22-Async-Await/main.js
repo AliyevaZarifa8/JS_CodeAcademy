@@ -16,8 +16,10 @@ async function getAllObj() {
         <div class="ms-5">
           <i class="fa-solid fa-trash-can me-3 text-danger" id="${element.id}"
            onclick=getDeleteObj("${element.id}") ></i>
-          <i class="fa-solid fa-pen-to-square text-success id="${element.id}"
-          onclick=getEditObj("${element.id}") "></i>
+
+           <a href="edit.html?id=${element.id}"> 
+             <i class="fa-solid fa-pen-to-square text-success") ></i></a>
+       
         </div>
       </div>
         `;
@@ -59,15 +61,8 @@ myForm.addEventListener("submit", function (e) {
       },
     }),
   });
-
+  window.location="index.html"
   getAllObj();
 });
 
-let myFormEdit = document.querySelector("#myformedit");
-let editInputcntName = document.querySelector("#countNameedit");
-let editInputCountry = document.querySelector("#countryedit");
 
-function getEditObj(id) {
-  window.location("/edit.html");
-  editInputcntName.value = editInputCountry.value = console.log(id);
-}
