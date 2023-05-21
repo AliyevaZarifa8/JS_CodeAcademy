@@ -24,7 +24,7 @@ async function getAllObj() {
       </div>
         `;
     });
-    console.log(data);
+    // console.log(data);
   } catch (err) {
     console.log(err);
   }
@@ -37,32 +37,7 @@ async function getDeleteObj(id) {
       method: "DELETE",
     });
     getAllObj();
-    console.log(id);
   } catch (err) {
     console.log(err);
   }
 }
-
-let myForm = document.querySelector("#myform");
-let addInputcntName = document.querySelector("#countName");
-let addInputCountry = document.querySelector("#country");
-
-myForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-  fetch(`https://northwind.vercel.app/api/customers/`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      contactName: addInputcntName.value,
-      address: {
-        country: addInputCountry.value,
-      },
-    }),
-  });
-  window.location="index.html"
-  getAllObj();
-});
-
-
